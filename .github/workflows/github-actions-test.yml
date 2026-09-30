@@ -1,0 +1,13 @@
+Name: github-actions-test
+On:
+  push:
+    branches:
+      - main
+
+jobs:
+  My-Deploy-Job:
+    runs-on: ubutu-latest
+
+    steps:
+      - name : Hello World 출력
+        run : echo "Hello World"
