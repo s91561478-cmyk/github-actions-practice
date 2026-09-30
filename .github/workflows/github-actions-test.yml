@@ -1,5 +1,5 @@
-Name: github-actions-test
-On:
+name: github-actions-test
+on:
   push:
     branches:
       - main
