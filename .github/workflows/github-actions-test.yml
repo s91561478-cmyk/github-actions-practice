@@ -6,7 +6,7 @@ on:
 
 jobs:
   My-Deploy-Job:
-    runs-on: ubutu-latest
+    runs-on: windows-latest
 
     steps:
       - name : Hello World 출력
