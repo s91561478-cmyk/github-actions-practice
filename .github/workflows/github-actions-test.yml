@@ -21,3 +21,8 @@ jobs:
         run : |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
+
+      - name : 노출이 되면 안되는 값 출력
+        run : |
+          echo ${{ secrets.MY_NAME }}
+          echo ${{ secrets.MY_HOBBY }}
