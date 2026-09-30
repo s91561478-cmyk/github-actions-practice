@@ -11,3 +11,8 @@ jobs:
     steps:
       - name : Hello World 출력
         run : echo "Hello World"
+
+      - name : 여러 명령어 문장 출력하기
+        run : |
+          echo "Good"
+          echo "Morning"
