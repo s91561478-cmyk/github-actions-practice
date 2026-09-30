@@ -6,7 +6,7 @@ on:
 
 jobs:
   My-Deploy-Job:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name : Hello World 출력
