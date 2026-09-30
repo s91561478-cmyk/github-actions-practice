@@ -1,28 +1,43 @@
+# name : GitHub Actions Workflow의 이름을 정의한다.
+# 아래의 설정은 workflow의 이름을 "github-actions-test"로 설정하겠다는 의미이다.
 name: github-actions-test
+
+# on : 어떤 이벤트가 발생했을 때 Workflow를 실행할 것인지 정의한다.
+# main 브랜치에 push 이벤트가 발생하면 Workflow를 실행한다.
 on:
   push:
     branches:
       - main
 
+# jobs : 실행할 작업(Job)을 정의한다.
 jobs:
+  # Job의 이름(ID)을 설정한다.
   My-Deploy-Job:
+    # Job을 실행할 Runner를 지정한다.
+    # GitHub가 ubuntu-latest 라벨에 지정한 Ubuntu Runner를 사용한다.
     runs-on: ubuntu-latest
-
+    # 하나의 Job은 여러 개의 Step으로 구성할 수 있다.
     steps:
+      # Step의 이름
       - name : Hello World 출력
+        # 실행할 명령어
         run : echo "Hello World"
 
       - name : 여러 명령어 문장 출력하기
+        # 여러 줄의 명령어를 실행하려면 | 를 사용한다.
         run : |
           echo "Good"
           echo "Morning"
 
       - name : Github Actions 자체에 저장되어있는 변수를 사용
+        # Runner의 환경 변수를 참조할 수 있다.
         run : |
           echo $GITHUB_SHA
           echo $GITHUB_REPOSITORY
 
       - name : 노출이 되면 안되는 값 출력
+        # ${{ secrets.변수명 }}으로 등록된 Secret을 참조할 수 있다.
+        # 실제 CI/CD에서는 Secret 값을 직접 출력하지 않는다.
         run : |
           echo ${{ secrets.MY_NAME }}
           echo ${{ secrets.MY_HOBBY }}
