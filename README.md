@@ -109,3 +109,9 @@ runs-on: ubuntu-latest
 - Job 실행 시 `Set up job → Steps 실행 → Complete job` 순서로 진행된다.
 - 환경 변수와 Secrets를 활용하여 Workflow에서 필요한 값을 사용할 수 있다.
 - 오류 발생 시 Workflow 실행 로그를 확인하여 문법, Runner Label 등의 설정을 확인하는 것이 중요하다.
+
+## 4. 학습 기록
+
+GitHub Actions 및 CI/CD에 대해 학습한 이론 내용은 개인 블로그에 정리했습니다.
+
+- [GitHub Actions 및 CI/CD 학습 정리 - Naver Blog](https://blog.naver.com/siksikhanjapenlife/224427921410)
