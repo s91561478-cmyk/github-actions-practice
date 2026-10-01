@@ -1,4 +1,4 @@
-1.
+1.Workflow 문법 오류
 ■ 문제상황
 GitHub Actions의 Workflow 파일을 작성하여 GitHub 레지스토리에 Push 했지만 Workflow가 실행되지 않고 오류가 발생
 
@@ -31,7 +31,8 @@ on:
 ■ 배운점
 GitHub Actions의 Workflow에서는 name, on, jobs, steps, runs-on 등 정해진 키의 대소문자를 정확하게 작성해야 한다.
 
-2.
+
+2.Runner 할당 대기 문제
 ■ 문제상황
 GitHub Actions Workflow를 작성하고 GitHub Repository에 Push했지만, Job이 실행되지 않고 오랫동안 Queued 상태로 대기했다.
 Job의 실행 로그를 확인한 결과 다음과 같은 메시지가 출력되었다.
