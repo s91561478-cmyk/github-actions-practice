@@ -19,31 +19,22 @@ Workflow가 실행되는 과정을 확인했습니다.
   - `GITHUB_REPOSITORY`
 - GitHub Actions Secrets 사용
 
-### Workflow 실행 흐름
+### 실행 결과
 
-```text
-Git Push
-   ↓
-Push 이벤트 발생
-   ↓
-Workflow 실행
-   ↓
-Runner 할당
-   ↓
-Set up job
-   ↓
-Steps 실행
-   ↓
-Complete job
-   ↓
-Workflow 완료
-```
+작성한 Workflow를 `main` 브랜치에 Push하여 GitHub Actions가 정상적으로 실행되는 것을 확인했습니다.
+
+![GitHub Actions 실행 결과](images/workflow-result.png)
+
+- `Hello World` 출력
+- 여러 개의 명령어 실행
+- GitHub Actions 환경 변수 확인
+- Secrets 값이 로그에서 `***`로 마스킹되는 것을 확인
 
 ## 2. 트러블슈팅
 
-### 1) Workflow 문법 오류
+### 2-1) Workflow 문법 오류
 
-**문제**
+**■ 문제**
 
 Workflow 실행 시 다음과 같은 오류가 발생했습니다.
 
@@ -53,11 +44,11 @@ Unexpected value 'Name'
 Unexpected value 'On'
 ```
 
-**원인**
+**■ 원인**
 
 GitHub Actions의 키를 `Name`, `On`으로 잘못 작성했습니다.
 
-**해결**
+**■ 해결**
 
 GitHub Actions의 올바른 키인 `name`, `on`으로 수정하여 문제를 해결했습니다.
 
@@ -72,9 +63,9 @@ on:
 
 ---
 
-### 2) Runner 할당 대기 문제
+### 2-2) Runner 할당 대기 문제
 
-**문제**
+**■ 문제**
 
 Job이 `Queued` 상태에서 계속 대기하며 다음과 같은 메시지가 출력되었습니다.
 
@@ -83,7 +74,7 @@ Requested labels: ubutu-latest
 Waiting for a runner to pick up this job...
 ```
 
-**원인**
+**■ 원인**
 
 `runs-on`에 지정한 Ubuntu Runner Label에 오타가 있었습니다.
 
@@ -91,7 +82,7 @@ Waiting for a runner to pick up this job...
 runs-on: ubutu-latest
 ```
 
-**해결**
+**■ 해결**
 
 Runner Label을 `ubuntu-latest`로 수정한 후 정상적으로 Runner가 할당되어 Job 실행에 성공했습니다.
 
