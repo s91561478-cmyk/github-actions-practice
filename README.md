@@ -45,7 +45,7 @@ Workflow 완료
 
 **문제**
 
-Workflow 실행 시 다음 오류가 발생했습니다.
+Workflow 실행 시 다음과 같은 오류가 발생했습니다.
 
 ```text
 Invalid workflow file
@@ -59,7 +59,7 @@ GitHub Actions의 키를 `Name`, `On`으로 잘못 작성했습니다.
 
 **해결**
 
-GitHub Actions의 올바른 키인 `name`, `on`으로 수정하여 해결했습니다.
+GitHub Actions의 올바른 키인 `name`, `on`으로 수정하여 문제를 해결했습니다.
 
 ```yaml
 name: github-actions-test
@@ -76,7 +76,7 @@ on:
 
 **문제**
 
-Job이 `Queued` 상태에서 계속 대기하며 다음 메시지가 출력되었습니다.
+Job이 `Queued` 상태에서 계속 대기하며 다음과 같은 메시지가 출력되었습니다.
 
 ```text
 Requested labels: ubutu-latest
